@@ -6,9 +6,11 @@ import java.util.List;
 public class Order {
 	
 	private List<MenuItem> orderItems;
+	private double taxRate; 
 	
-	public Order() {
+	public Order(double taxRate) {
 		this.orderItems = new LinkedList<>();
+		this.taxRate = taxRate; 
 	}
 	
 	public void addItem(MenuItem item) {
@@ -25,5 +27,10 @@ public class Order {
 			sum += item.getPrice(); // testComputeSubtotalMultipleItems() when loop runs 2~ times
 		}
 		return sum; 
+	}
+	
+	public double computeTax() {
+		return computeSubtotal() * this.taxRate;
+		
 	}
 }

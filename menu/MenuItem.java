@@ -1,5 +1,9 @@
 package menu;
-
+/**
+ * A bean that represents an item on a menu
+ * @author yiryoungkim
+ *
+ */
 public class MenuItem {
 	private double price;
 	private String name; 

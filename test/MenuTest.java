@@ -11,6 +11,9 @@ import menu.MenuItem;
 // calories
 // allergens
 // 
+// Lecture note:
+// - as unit test gets complicated, the 'setup' code gets complicated, not assertTrue and etc. 
+//   so add setup() that's repeated in each unit test. 
 class MenuTest {
 	private MenuItem item;  // since we're trying to access this variable in different methods, instance variable is created. 
 	
